@@ -33,6 +33,7 @@ def create(request):
                 request, 'Got an error when trying to create new movie: {}'.format(e))
     return redirect('/')
 
+
 def edit(request, movie_id):
     if request.method == 'POST':
         data = {
@@ -53,6 +54,7 @@ def edit(request, movie_id):
             messages.warning(
                 request, 'Got an error when trying to update movie: {}'.format(e))
         return redirect('/')
+
 
 def delete(request, movie_id):
     try:
